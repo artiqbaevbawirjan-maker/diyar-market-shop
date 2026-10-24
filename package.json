@@ -1,0 +1,12 @@
+{
+  "name": "diyar-market-frontend",
+  "version": "1.0.0",
+  "description": "Diyar Market — Onlayn azıq-awqat dúkanı frontend serveri",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["diyar-market", "frontend", "karakalpak"],
+  "author": "",
+  "license": "MIT"
+}

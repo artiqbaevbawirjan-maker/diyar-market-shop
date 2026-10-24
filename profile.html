@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="kaa">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+  <title>Diyar Market — Пайдаланыўшы профили</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-low": "#eaf7ec",
+            "on-secondary": "#ffffff",
+            "primary-container": "#0d472b",
+            "on-primary-fixed": "#002110",
+            "on-secondary-fixed-variant": "#005321",
+            "background": "#f0fdf1",
+            "surface-container-high": "#dfebe0",
+            "inverse-primary": "#9ad3ad",
+            "on-error": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#414942",
+            "on-secondary-container": "#007432",
+            "on-primary-fixed-variant": "#195033",
+            "surface-container-lowest": "#ffffff",
+            "surface-variant": "#d9e6db",
+            "on-tertiary-container": "#a4aaa6",
+            "surface-container": "#e4f1e6",
+            "secondary-container": "#6bff8f",
+            "inverse-on-surface": "#e7f4e9",
+            "secondary": "#006e2f",
+            "surface-dim": "#d0ddd2",
+            "error-container": "#ffdad6",
+            "surface-container-highest": "#d9e6db",
+            "primary": "#002f19",
+            "outline-variant": "#c0c9c0",
+            "tertiary-container": "#393f3c",
+            "inverse-surface": "#28332c",
+            "surface-tint": "#33694a",
+            "outline": "#717972",
+            "tertiary": "#242927",
+            "secondary-fixed": "#6bff8f",
+            "on-tertiary-fixed": "#171d1b",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#424845",
+            "tertiary-fixed-dim": "#c2c8c4",
+            "surface-bright": "#f0fdf1",
+            "error": "#ba1a1a",
+            "tertiary-fixed": "#dfe4e0",
+            "on-background": "#131e17",
+            "secondary-fixed-dim": "#4ae176",
+            "on-surface": "#131e17",
+            "primary-fixed": "#b6f0c8",
+            "on-secondary-fixed": "#002109",
+            "surface": "#f0fdf1",
+            "on-error-container": "#93000a",
+            "primary-fixed-dim": "#9ad3ad",
+            "on-primary-container": "#7db591"
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overscroll-behavior: none;
+    }
+    ::-webkit-scrollbar { display: none; }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface flex flex-col min-h-screen">
+
+  <!-- ЖОҚАРҒЫ ПАНЕЛЬ -->
+  <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/20 shadow-xs">
+    <div class="h-16 px-4 flex items-center justify-between gap-3 max-w-md mx-auto">
+      <div class="flex items-center gap-2">
+        <a href="index.html" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-low transition-colors">
+          <span class="material-symbols-outlined text-[24px]">arrow_back</span>
+        </a>
+        <h1 class="text-base font-bold text-primary">Пайдаланыўшы профили</h1>
+      </div>
+      <button class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-low">
+        <span class="material-symbols-outlined text-[22px]">settings</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ТИЙКАРҒЫ БӨЛИМ -->
+  <main class="flex flex-col relative w-full pt-20 pb-28 max-w-md mx-auto px-4 space-y-4">
+
+    <!-- ПРОФИЛЬ КАРТОЧКАСЫ -->
+    <div class="bg-surface-container-lowest rounded-3xl p-4 shadow-xs border border-outline-variant/30 flex items-center gap-3.5">
+      <img alt="Азамат" class="w-16 h-16 rounded-full object-cover border-2 border-primary-container shadow-xs" src="https://lh3.googleusercontent.com/aida/AEtjO1WUZfSrE_g9RhhbwzDXSIiMBazNHoaCnmn2wEQypPF9V3EmoO_luTaeJGyPaCup4xknRxrKKI8zTdeFu6Rfqc2ReDS7GDxU5njU22lBA6-vaojYZoGKzvFMF8N397IVR9FUTd8Td2KlsZ_Y6UCwdtVlw94U2f1PmqICaQhRcIyYRvXWsPOnEmE68kV2kQwuSMNjJSJsi1jyhCbPYKNP4dClfKdlR2mcitYMNSI1LvBvu95FWnzG58NpqkpRK_z0s1C1s28Y3-Zg"/>
+      <div class="flex flex-col min-w-0 flex-1">
+        <h2 class="text-base font-bold text-primary truncate">Азамат Базарбаев</h2>
+        <p class="text-xs text-on-surface-variant truncate">+998 90 123 45 67</p>
+        <div class="inline-flex items-center gap-1 mt-1 text-[11px] text-secondary font-bold">
+          <span class="material-symbols-outlined text-[14px]">verified</span>
+          <span>Diyar Club • Премиум тутыныўшы</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- БОНУС ҲӘМ КЭШБЭК -->
+    <div class="grid grid-cols-2 gap-3 text-xs">
+      <div class="bg-primary-container text-white p-3.5 rounded-2xl shadow-xs space-y-1">
+        <span class="text-[11px] text-surface-variant block">Diyar Бонус есабы</span>
+        <span class="text-lg font-black text-secondary-fixed">24,500 сўм</span>
+        <p class="text-[10px] text-surface-variant">Кейинги буйыртпаға шегирме</p>
+      </div>
+      <div class="bg-surface-container-lowest p-3.5 rounded-2xl shadow-xs border border-outline-variant/30 space-y-1">
+        <span class="text-[11px] text-on-surface-variant block">Тамамланған буйыртпалар</span>
+        <span class="text-lg font-black text-primary">18 дана</span>
+        <a href="orders.html" class="text-[10px] text-secondary font-bold block hover:underline">Тарийхты көриў &rarr;</a>
+      </div>
+    </div>
+
+    <!-- МӘНЗИЛЛЕР ҲӘМ КАРТАЛАР БӨЛИМИ -->
+    <div class="bg-surface-container-lowest rounded-2xl shadow-xs border border-outline-variant/30 divide-y divide-outline-variant/20 text-xs">
+      <a href="checkout.html" class="p-3.5 flex items-center justify-between hover:bg-surface-container-low transition-colors">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary text-[20px]">location_on</span>
+          <div>
+            <p class="font-bold text-primary">Сақланған мәнзиллер</p>
+            <p class="text-[11px] text-on-surface-variant">Нөкис қаласы, 22-киши район...</p>
+          </div>
+        </div>
+        <span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+      </a>
+
+      <a href="checkout.html" class="p-3.5 flex items-center justify-between hover:bg-surface-container-low transition-colors">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary text-[20px]">credit_card</span>
+          <div>
+            <p class="font-bold text-primary">Бириктирилген карталар</p>
+            <p class="text-[11px] text-on-surface-variant">Uzcard •••• 4582</p>
+          </div>
+        </div>
+        <span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+      </a>
+
+      <a href="orders.html" class="p-3.5 flex items-center justify-between hover:bg-surface-container-low transition-colors">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary text-[20px]">history</span>
+          <div>
+            <p class="font-bold text-primary">Буйыртпалар тарийхы</p>
+            <p class="text-[11px] text-on-surface-variant">Барлық өткен буйыртпалар дизими</p>
+          </div>
+        </div>
+        <span class="material-symbols-outlined text-outline text-[18px]">chevron_right</span>
+      </a>
+
+      <div class="p-3.5 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary text-[20px]">language</span>
+          <div>
+            <p class="font-bold text-primary">Тийкарғы тил</p>
+            <p class="text-[11px] text-secondary font-bold">Қарақалпақ тили (Кирилл)</p>
+          </div>
+        </div>
+        <span class="material-symbols-outlined text-outline text-[18px]">check</span>
+      </div>
+    </div>
+
+    <!-- ШЫҒЫЎ ТҮЙМЕСИ -->
+    <button class="w-full py-3 rounded-2xl bg-surface-container-lowest text-error font-bold text-xs border border-error/30 hover:bg-error-container/20 active:scale-98 transition-all flex items-center justify-center gap-2">
+      <span class="material-symbols-outlined text-[18px]">logout</span>
+      <span>Аккаунттан шығыў</span>
+    </button>
+
+  </main>
+
+  <!-- ТӨМЕНГИ БАҒДАРЛАЎ ПАНЕЛИ -->
+  <nav class="fixed bottom-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-t border-outline-variant/30 pb-2">
+    <div class="h-16 max-w-md mx-auto px-2 flex items-center justify-around">
+      <a href="index.html" class="flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-primary transition-colors text-xs">
+        <span class="material-symbols-outlined text-[24px]">home</span>
+        <span>Басқы бет</span>
+      </a>
+      <a href="catalog.html" class="flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-primary transition-colors text-xs">
+        <span class="material-symbols-outlined text-[24px]">grid_view</span>
+        <span>Каталог</span>
+      </a>
+      <a href="cart.html" class="flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-primary transition-colors text-xs relative">
+        <div class="relative flex items-center justify-center">
+          <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+          <span class="absolute -top-1 -right-2 bg-secondary text-white text-[10px] min-w-[16px] h-4 px-1 rounded-full flex items-center justify-center font-bold">3</span>
+        </div>
+        <span>Себет</span>
+      </a>
+      <a href="checkout.html" class="flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-primary transition-colors text-xs">
+        <span class="material-symbols-outlined text-[24px]">credit_card</span>
+        <span>Төлем</span>
+      </a>
+      <a href="profile.html" class="flex flex-col items-center justify-center gap-0.5 text-primary font-bold text-xs">
+        <span class="material-symbols-outlined text-[24px]">person</span>
+        <span>Профиль</span>
+      </a>
+    </div>
+  </nav>
+
+</body>
+</html>

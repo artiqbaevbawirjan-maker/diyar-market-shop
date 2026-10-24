@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="kaa">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+  <title>Diyar Market — Өним толық мағлыўматы</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-low": "#eaf7ec",
+            "on-secondary": "#ffffff",
+            "primary-container": "#0d472b",
+            "on-primary-fixed": "#002110",
+            "on-secondary-fixed-variant": "#005321",
+            "background": "#f0fdf1",
+            "surface-container-high": "#dfebe0",
+            "inverse-primary": "#9ad3ad",
+            "on-error": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#414942",
+            "on-secondary-container": "#007432",
+            "on-primary-fixed-variant": "#195033",
+            "surface-container-lowest": "#ffffff",
+            "surface-variant": "#d9e6db",
+            "on-tertiary-container": "#a4aaa6",
+            "surface-container": "#e4f1e6",
+            "secondary-container": "#6bff8f",
+            "inverse-on-surface": "#e7f4e9",
+            "secondary": "#006e2f",
+            "surface-dim": "#d0ddd2",
+            "error-container": "#ffdad6",
+            "surface-container-highest": "#d9e6db",
+            "primary": "#002f19",
+            "outline-variant": "#c0c9c0",
+            "tertiary-container": "#393f3c",
+            "inverse-surface": "#28332c",
+            "surface-tint": "#33694a",
+            "outline": "#717972",
+            "tertiary": "#242927",
+            "secondary-fixed": "#6bff8f",
+            "on-tertiary-fixed": "#171d1b",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#424845",
+            "tertiary-fixed-dim": "#c2c8c4",
+            "surface-bright": "#f0fdf1",
+            "error": "#ba1a1a",
+            "tertiary-fixed": "#dfe4e0",
+            "on-background": "#131e17",
+            "secondary-fixed-dim": "#4ae176",
+            "on-surface": "#131e17",
+            "primary-fixed": "#b6f0c8",
+            "on-secondary-fixed": "#002109",
+            "surface": "#f0fdf1",
+            "on-error-container": "#93000a",
+            "primary-fixed-dim": "#9ad3ad",
+            "on-primary-container": "#7db591"
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overscroll-behavior: none;
+    }
+    ::-webkit-scrollbar { display: none; }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface flex flex-col min-h-screen">
+
+  <!-- ЖОҚАРҒЫ ПАНЕЛЬ -->
+  <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/20 shadow-xs">
+    <div class="h-16 px-4 flex items-center justify-between gap-3 max-w-md mx-auto">
+      <div class="flex items-center gap-2">
+        <a href="index.html" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-low transition-colors">
+          <span class="material-symbols-outlined text-[24px]">arrow_back</span>
+        </a>
+        <h1 class="text-base font-bold text-primary truncate">Өним толық мағлыўматы</h1>
+      </div>
+      <a href="cart.html" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-low relative">
+        <span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+        <span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary"></span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ТИЙКАРҒЫ БӨЛИМ -->
+  <main class="flex flex-col relative w-full pt-16 pb-36 max-w-md mx-auto">
+
+    <!-- ӨНИМ СҮЎРЕТИ ҲӘМ БЕЛГИЛЕРИ -->
+    <div class="relative w-full bg-surface-container-low px-4 pt-4 pb-6 rounded-b-3xl border-b border-outline-variant/30">
+      <div class="flex items-center justify-between mb-3">
+        <div class="inline-flex items-center gap-1 px-3 py-1 bg-secondary-container text-on-secondary-fixed-variant rounded-full text-xs font-bold shadow-xs">
+          <span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">eco</span>
+          <span>100% Таза ҳәм Тәбийғый</span>
+        </div>
+        <button onclick="toggleFav(this)" class="w-10 h-10 rounded-full bg-white text-primary flex items-center justify-center shadow-xs active:scale-90 transition-transform">
+          <span class="material-symbols-outlined text-[20px]">favorite</span>
+        </button>
+      </div>
+
+      <div class="flex items-center justify-center py-2">
+        <img class="w-56 h-56 object-contain drop-shadow-md" alt="Қызыл Алма" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyDVJ3YNUfoCVwMtZLljcp18TbJHN7dg4A0kHxPGNBazNUZ6awse75t10j-zfPA6es6XgCyte9TKGczIPodCPwgc1ytTKFcH1gG9oU1y7ovtI1DB09adDMkHPP74tl4n1lybR_ETlKuCtPX7fDk7NMqAeSqHljyyptiOKXWBjI8o6EtNQ28ynbyJj5bnYTYFhXYJcvaf20Q_OaMTYdfdIS6rctSVDNlcs8IMjsrWrvvEmI7zM1F5Y"/>
+      </div>
+
+      <div class="flex items-center justify-center gap-1.5 mt-2">
+        <span class="w-6 h-1.5 rounded-full bg-primary"></span>
+        <span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+        <span class="w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+      </div>
+    </div>
+
+    <!-- ӨНИМ МАҒЛЫЎМАТЛАРЫ -->
+    <div class="px-4 pt-4 space-y-4">
+      <div>
+        <div class="flex items-center justify-between text-xs text-on-surface-variant mb-1">
+          <span>Код: #DM-4821</span>
+          <div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-full">
+            <span class="material-symbols-outlined text-amber-500 text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            <span class="font-bold text-on-surface">4.9</span>
+            <span>(128 баҳа)</span>
+          </div>
+        </div>
+        <h2 class="text-xl font-extrabold text-primary">Қызыл Алма (Golden Delicious)</h2>
+        <p class="text-xs text-on-surface-variant mt-0.5">Таза пысқан, шийрин ҳәм қытырлаўық бағ өними</p>
+      </div>
+
+      <!-- БАҲАСЫ КАРТОЧКАСЫ -->
+      <div class="flex items-center justify-between p-3.5 rounded-2xl bg-surface-container-lowest shadow-xs border border-outline-variant/30">
+        <div>
+          <div class="flex items-baseline gap-2">
+            <span class="text-xl font-extrabold text-primary">14,000 сўм</span>
+            <span class="text-xs text-outline line-through">18,000 сўм</span>
+          </div>
+          <span class="text-[11px] text-on-surface-variant">1 кг ушын баҳа</span>
+        </div>
+        <span class="px-2.5 py-1 rounded-xl bg-error-container text-on-error-container text-xs font-bold">-22% шегирме</span>
+      </div>
+
+      <!-- САЛМАҚТЫ ТАҢЛАЎ (PRESETS) -->
+      <div class="space-y-1.5">
+        <label class="text-xs font-bold text-primary">Салмақты таңлаң:</label>
+        <div class="grid grid-cols-4 gap-2" id="weightPresets">
+          <button onclick="setWeight(0.5, this)" class="py-2 rounded-xl text-xs font-bold bg-surface-container-lowest border border-outline-variant/30">0.5 кг</button>
+          <button onclick="setWeight(1.0, this)" class="py-2 rounded-xl text-xs font-bold bg-primary text-white border border-primary shadow-xs">1 кг</button>
+          <button onclick="setWeight(2.0, this)" class="py-2 rounded-xl text-xs font-bold bg-surface-container-lowest border border-outline-variant/30">2 кг</button>
+          <button onclick="setWeight(3.0, this)" class="py-2 rounded-xl text-xs font-bold bg-surface-container-lowest border border-outline-variant/30">3 кг</button>
+        </div>
+      </div>
+
+      <!-- МУҒДАРДЫ БЕЛГИЛЕЎ (STEPPER) -->
+      <div class="flex items-center justify-between p-3 rounded-2xl bg-surface-container-lowest shadow-xs border border-outline-variant/30">
+        <div>
+          <span class="text-xs font-bold text-primary block">Буйыртпа муғдары</span>
+          <span class="text-[11px] text-on-surface-variant" id="subtotal">Жәми: 14,000 сўм</span>
+        </div>
+        <div class="flex items-center gap-2 bg-surface-container-low px-2 py-1 rounded-full">
+          <button onclick="changeWeightStep(-0.5)" class="w-7 h-7 rounded-full bg-white flex items-center justify-center text-primary shadow-xs active:scale-90">
+            <span class="material-symbols-outlined text-[16px]">remove</span>
+          </button>
+          <span class="text-xs font-bold text-primary w-12 text-center" id="weightDisplay">1 кг</span>
+          <button onclick="changeWeightStep(0.5)" class="w-7 h-7 rounded-full bg-secondary text-white flex items-center justify-center shadow-xs active:scale-90">
+            <span class="material-symbols-outlined text-[16px]">add</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- ТЕЗ ЖЕТКЕРИЎ ҲӘМ КЕПИЛЛИК БЕЛГИЛЕРИ -->
+      <div class="grid grid-cols-2 gap-2 text-xs">
+        <div class="p-3 rounded-2xl bg-surface-container-lowest shadow-xs border border-outline-variant/30 flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-fixed-variant flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-[18px]">electric_moped</span>
+          </div>
+          <div>
+            <p class="font-bold text-primary">Тез жеткериў</p>
+            <p class="text-[11px] text-on-surface-variant">Бүгин, 25-30 мин</p>
+          </div>
+        </div>
+        <div class="p-3 rounded-2xl bg-surface-container-lowest shadow-xs border border-outline-variant/30 flex items-center gap-2">
+          <div class="w-8 h-8 rounded-full bg-surface-container-high text-primary flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-[18px]">verified</span>
+          </div>
+          <div>
+            <p class="font-bold text-primary">Сапа кепиллиги</p>
+            <p class="text-[11px] text-on-surface-variant">100% қайтарыў</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ӨНИМ СЫПАТЛАМАСЫ -->
+      <div class="p-4 rounded-2xl bg-surface-container-lowest shadow-xs border border-outline-variant/30 space-y-2 text-xs">
+        <h3 class="font-bold text-primary text-sm">Өним сыпатламасы</h3>
+        <div class="space-y-1.5 text-on-surface-variant">
+          <div class="flex justify-between py-0.5 border-b border-outline-variant/20">
+            <span>Келип шығыўы:</span>
+            <span class="text-primary font-bold">Ферғана бағлары</span>
+          </div>
+          <div class="flex justify-between py-0.5 border-b border-outline-variant/20">
+            <span>Сақлаў мүддети:</span>
+            <span class="text-primary font-bold">+2°C... +6°C да 14 күн</span>
+          </div>
+          <div class="flex justify-between py-0.5 border-b border-outline-variant/20">
+            <span>Қурамы:</span>
+            <span class="text-secondary font-bold">Дәри-дәрмансыз, экологиялық</span>
+          </div>
+        </div>
+        <p class="text-on-surface-variant pt-2 leading-relaxed">
+          Ферғана ойпатлығының қуяшлы бағларында тәбийғый усылда жетилистирилген. Балдай шийрин, жуқа қабықлы ҳәм тәбийғый дәруменлерге бай өним.
+        </p>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- СЕБЕТКЕ ҚОСЫЎ ТҮЙМЕСИ (STICKY BOTTOM BAR) -->
+  <aside class="fixed bottom-16 left-0 w-full z-40 bg-surface/90 backdrop-blur-xl border-t border-outline-variant/30 px-4 py-2.5 shadow-md">
+    <div class="max-w-md mx-auto flex items-center justify-between gap-3">
+      <div>
+        <span class="text-[10px] text-on-surface-variant uppercase tracking-wider block">Жәми баҳа</span>
+        <span class="text-base text-primary font-extrabold" id="bottomTotal">14,000 сўм</span>
+      </div>
+      <a href="cart.html" onclick="addToCart(event)" id="addCartBtn" class="flex-1 h-12 bg-secondary hover:bg-primary text-white font-bold text-xs rounded-2xl flex items-center justify-center gap-1.5 shadow-md active:scale-98 transition-all">
+        <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+        <span>Себетке қосыў</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ТӨМЕНГИ БАҒДАРЛАЎ ПАНЕЛИ -->
+  <nav class="fixed bottom-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-t border-outline-variant/30 pb-2">
+    <div class="h-16 max-w-md mx-auto px-2 flex items-center justify-around">
+      <a href="index.html" class="flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-primary transition-colors text-xs">
+        <span class="material-symbols-outlined text-[24px]">home</span>
+        <span>Басқы бет</span>
+      </a>
+      <a href="catalog.html" class="flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-primary transition-colors text-xs">
+        <span class="material-symbols-outlined text-[24px]">grid_view</span>
+        <span>Каталог</span>
+      </a>
+      <a href="cart.html" class="flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-primary transition-colors text-xs relative">
+        <div class="relative flex items-center justify-center">
+          <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+          <span class="absolute -top-1 -right-2 bg-secondary text-white text-[10px] min-w-[16px] h-4 px-1 rounded-full flex items-center justify-center font-bold">3</span>
+        </div>
+        <span>Себет</span>
+      </a>
+      <a href="checkout.html" class="flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-primary transition-colors text-xs">
+        <span class="material-symbols-outlined text-[24px]">credit_card</span>
+        <span>Төлем</span>
+      </a>
+      <a href="orders.html" class="flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-primary transition-colors text-xs">
+        <span class="material-symbols-outlined text-[24px]">local_shipping</span>
+        <span>Буйыртпалар</span>
+      </a>
+    </div>
+  </nav>
+
+  <script>
+    let currentKg = 1.0;
+    const pricePerKg = 14000;
+
+    function updatePrice() {
+      const total = Math.round(currentKg * pricePerKg);
+      const str = total.toLocaleString('ru-RU') + ' сўм';
+      document.getElementById('weightDisplay').textContent = currentKg + ' кг';
+      document.getElementById('subtotal').textContent = 'Жәми: ' + str;
+      document.getElementById('bottomTotal').textContent = str;
+    }
+
+    function changeWeightStep(delta) {
+      if (currentKg + delta >= 0.5 && currentKg + delta <= 20) {
+        currentKg = parseFloat((currentKg + delta).toFixed(1));
+        updatePrice();
+      }
+    }
+
+    function setWeight(kg, btn) {
+      currentKg = kg;
+      document.querySelectorAll('#weightPresets button').forEach(b => {
+        b.className = "py-2 rounded-xl text-xs font-bold bg-surface-container-lowest border border-outline-variant/30";
+      });
+      btn.className = "py-2 rounded-xl text-xs font-bold bg-primary text-white border border-primary shadow-xs";
+      updatePrice();
+    }
+
+    function toggleFav(btn) {
+      btn.classList.toggle('text-error');
+    }
+
+    function addToCart(e) {
+      // Optional animation before navigation
+    }
+  </script>
+</body>
+</html>

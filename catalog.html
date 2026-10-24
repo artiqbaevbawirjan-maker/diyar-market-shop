@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="kaa">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+  <title>Diyar Market — Каталог</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-low": "#eaf7ec",
+            "on-secondary": "#ffffff",
+            "primary-container": "#0d472b",
+            "on-primary-fixed": "#002110",
+            "on-secondary-fixed-variant": "#005321",
+            "background": "#f0fdf1",
+            "surface-container-high": "#dfebe0",
+            "inverse-primary": "#9ad3ad",
+            "on-error": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "on-surface-variant": "#414942",
+            "on-secondary-container": "#007432",
+            "on-primary-fixed-variant": "#195033",
+            "surface-container-lowest": "#ffffff",
+            "surface-variant": "#d9e6db",
+            "on-tertiary-container": "#a4aaa6",
+            "surface-container": "#e4f1e6",
+            "secondary-container": "#6bff8f",
+            "inverse-on-surface": "#e7f4e9",
+            "secondary": "#006e2f",
+            "surface-dim": "#d0ddd2",
+            "error-container": "#ffdad6",
+            "surface-container-highest": "#d9e6db",
+            "primary": "#002f19",
+            "outline-variant": "#c0c9c0",
+            "tertiary-container": "#393f3c",
+            "inverse-surface": "#28332c",
+            "surface-tint": "#33694a",
+            "outline": "#717972",
+            "tertiary": "#242927",
+            "secondary-fixed": "#6bff8f",
+            "on-tertiary-fixed": "#171d1b",
+            "on-primary": "#ffffff",
+            "on-tertiary-fixed-variant": "#424845",
+            "tertiary-fixed-dim": "#c2c8c4",
+            "surface-bright": "#f0fdf1",
+            "error": "#ba1a1a",
+            "tertiary-fixed": "#dfe4e0",
+            "on-background": "#131e17",
+            "secondary-fixed-dim": "#4ae176",
+            "on-surface": "#131e17",
+            "primary-fixed": "#b6f0c8",
+            "on-secondary-fixed": "#002109",
+            "surface": "#f0fdf1",
+            "on-error-container": "#93000a",
+            "primary-fixed-dim": "#9ad3ad",
+            "on-primary-container": "#7db591"
+          },
+          fontFamily: {
+            sans: ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overscroll-behavior: none;
+    }
+    ::-webkit-scrollbar { display: none; }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface flex flex-col min-h-screen">
+
+  <!-- ЖОҚАРҒЫ ПАНЕЛЬ -->
+  <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/20 shadow-xs">
+    <div class="h-16 px-4 flex items-center justify-between gap-3 max-w-md mx-auto">
+      <div class="flex items-center gap-2">
+        <a href="index.html" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-low transition-colors">
+          <span class="material-symbols-outlined text-[24px]">arrow_back</span>
+        </a>
+        <h1 class="text-base font-bold text-primary">Өнимлер каталогы</h1>
+      </div>
+      <a href="cart.html" class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-low relative">
+        <span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+        <span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary"></span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ТИЙКАРҒЫ БӨЛИМ -->
+  <main class="flex flex-col relative w-full pt-20 pb-28 max-w-md mx-auto px-4 space-y-4">
+
+    <!-- ИЗЛЕЎ БАРИ -->
+    <div class="relative flex items-center bg-surface-container-lowest rounded-2xl shadow-xs px-3.5 h-12 border border-outline-variant/30">
+      <span class="material-symbols-outlined text-[22px] text-secondary shrink-0 mr-2">search</span>
+      <input class="w-full bg-transparent border-0 p-0 text-on-surface text-xs placeholder:text-outline focus:outline-none" placeholder="Каталогтан излеў (алма, помидор, сүт)..." type="text"/>
+    </div>
+
+    <!-- КАТЕГОРИЯЛАР ЧИПЛЕРИ (FILTER TABS) -->
+    <div class="flex gap-2 overflow-x-auto no-scrollbar py-1 text-xs">
+      <button class="px-3.5 py-1.5 rounded-full bg-primary text-white font-bold shrink-0 shadow-xs">Барлығы</button>
+      <button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-semibold border border-outline-variant/30 shrink-0">Мийўе & Овощ</button>
+      <button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-semibold border border-outline-variant/30 shrink-0">Сүт өнимлери</button>
+      <button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-semibold border border-outline-variant/30 shrink-0">Таза гөш</button>
+      <button class="px-3.5 py-1.5 rounded-full bg-surface-container-lowest text-on-surface-variant font-semibold border border-outline-variant/30 shrink-0">Нан өнимлери</button>
+    </div>
+
+    <!-- ӨНИМЛЕР СЕТКАСЫ (PRODUCT GRID) -->
+    <div class="grid grid-cols-2 gap-3">
+
+      <!-- Карточка 1: Алма -->
+      <div class="bg-surface-container-lowest rounded-2xl p-3 flex flex-col justify-between shadow-xs border border-outline-variant/30 relative group">
+        <span class="absolute top-2.5 left-2.5 z-10 px-2 py-0.5 rounded-full bg-error-container text-on-error-container text-[10px] font-bold">-22%</span>
+        <a href="product.html" class="w-full h-28 flex items-center justify-center my-1">
+          <img class="h-24 w-24 object-contain transition-transform group-hover:scale-105" alt="Қызыл Алма" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBT4SxfDYlw3ehculT9b7wfhnoQtSBV3xJvMZXbB_5olWFLb8uUlgVn4UJnGu6PsqSOEbWGN34dNi5oGOAjdyoiiXKuUTUYfP_rnHICfmX7QyDxxdLcQHTbro7KDf7J_nf_iPzQswPsxm_CtyEWTLX6zd9_SGwSoNBR_c7qiLxgzd7jpZ5C0arMCXsRgpzqx3eFNe6yxrYWTupDFxazmKSKOi1WMWHeIxpVrzy_DDPIUGd-XPWEJ0Q"/>
+        </a>
+        <div>
+          <span class="text-[11px] text-on-surface-variant">1 кг</span>
+          <a href="product.html" class="text-xs font-bold text-on-surface truncate block hover:text-secondary">Қызыл Алма (Таза бағ)</a>
+          <div class="flex items-baseline gap-1 mt-1">
+            <span class="text-sm text-primary font-extrabold">14,000 сўм</span>
+            <span class="text-[10px] text-outline line-through">18,000</span>
+          </div>
+          <button onclick="addToCart(this)" class="mt-2 w-full h-8 bg-secondary text-white rounded-xl text-xs font-bold flex items-center justify-center gap-1 active:scale-95 transition-all">
+            <span class="material-symbols-outlined text-[16px]">add</span>
+            <span>Себетке</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Карточка 2: Сүт -->
+      <div class="bg-surface-container-lowest rounded-2xl p-3 flex flex-col justify-between shadow-xs border border-outline-variant/30 relative group">
+        <span class="absolute top-2.5 left-2.5 z-10 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant text-[10px] font-bold">Хит</span>
+        <a href="product.html" class="w-full h-28 flex items-center justify-center my-1">
+          <img class="h-24 w-24 object-contain transition-transform group-hover:scale-105" alt="Сүт" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu0D88jJqLCHK0aqvydnb1ToGPwnTfZEhogqGVmtAPv937tqX8UcWrNgvDTUvkIwfUIiQ0f3DBW87b4SHS3p6DomeWbnODMtpFCaXt1UxmNbkSvaod75h1QLegZ9DdT6MG60IlMhTgeOE-OLOy6B18JlvNpySHtsIoKN3iLSVupVtXZbX_tvNMyC4kIWSTZsUIM5q_KVEI5v2692D61LpYooPIzDJStHrnZwLcpBGQTLYTUn9YPGY"/>
+        </a>
+        <div>
+          <span class="text-[11px] text-on-surface-variant">1 литр (3.2%)</span>
+          <a href="product.html" class="text-xs font-bold text-on-surface truncate block hover:text-secondary">Тәбийғый сүт Diyar</a>
+          <div class="flex items-baseline gap-1 mt-1">
+            <span class="text-sm text-primary font-extrabold">11,000 сўм</span>
+          </div>
+          <button onclick="addToCart(this)" class="mt-2 w-full h-8 bg-secondary text-white rounded-xl text-xs font-bold flex items-center justify-center gap-1 active:scale-95 transition-all">
+            <span class="material-symbols-outlined text-[16px]">add</span>
+            <span>Себетке</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Карточка 3: Банан -->
+      <div class="bg-surface-container-lowest rounded-2xl p-3 flex flex-col justify-between shadow-xs border border-outline-variant/30 relative group">
+        <span class="absolute top-2.5 left-2.5 z-10 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant text-[10px] font-bold">-15%</span>
+        <a href="product.html" class="w-full h-28 flex items-center justify-center my-1">
+          <img class="h-24 w-24 object-contain transition-transform group-hover:scale-105" alt="Банан" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCecfMVXM-ZRlpJbbjG1c6fXUzG7D05twIxT12R3tljv08Uo1Q8QG4rq9Z3vdXhhsuoQDz6fO3W7Lq4JprSwy7l4yxlZANbJGV-iQSBkOa5YWVJJ1bN3FkYFMg1qsy3Adgh3M4mBvWYsJHdbi0TSzMbFW90QuOKRoOTVJ2Fw8vDCulyYB9WA53Fcy1KfkrpOeyEJF5GX09tEvPsqqzRPxcYcc4Q0ysTDTHFh9PT2OMRPii6gahI3lk"/>
+        </a>
+        <div>
+          <span class="text-[11px] text-on-surface-variant">1 кг</span>
+          <a href="product.html" class="text-xs font-bold text-on-surface truncate block hover:text-secondary">Эквадор Бананлары</a>
+          <div class="flex items-baseline gap-1 mt-1">
+            <span class="text-sm text-primary font-extrabold">21,000 сўм</span>
+            <span class="text-[10px] text-outline line-through">25,000</span>
+          </div>
+          <button onclick="addToCart(this)" class="mt-2 w-full h-8 bg-secondary text-white rounded-xl text-xs font-bold flex items-center justify-center gap-1 active:scale-95 transition-all">
+            <span class="material-symbols-outlined text-[16px]">add</span>
+            <span>Себетке</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Карточка 4: Помидор -->
+      <div class="bg-surface-container-lowest rounded-2xl p-3 flex flex-col justify-between shadow-xs border border-outline-variant/30 relative group">
+        <span class="absolute top-2.5 left-2.5 z-10 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-fixed-variant text-[10px] font-bold">-30%</span>
+        <a href="product.html" class="w-full h-28 flex items-center justify-center my-1">
+          <img class="h-24 w-24 object-contain transition-transform group-hover:scale-105" alt="Помидор" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe07pvI0ijpV_wE7cWmA8K_ALTIz13WYhAGForqNF_ndtcvaA7lMVbblVV4f6rMTRoa8xGGUhhwcz49A_C0ADQdHKT4SpQrnsWVR2jFc8ZfmeYr19ngiG9anAcijEImkFTJqNG_XhLjoN9EuarsWbNrSIH2lUawUisR1mgm3h1hb5m3xxyvi0e06mLyP5nnsW-eVKkRIC-2tODzv5mJDAbZJ302JhjtJS5-ggdDDC_tp338FhXwRU"/>
+        </a>
+        <div>
+          <span class="text-[11px] text-on-surface-variant">1 кг</span>
+          <a href="product.html" class="text-xs font-bold text-on-surface truncate block hover:text-secondary">Қызыл Помидор (Ыссыхана)</a>
+          <div class="flex items-baseline gap-1 mt-1">
+            <span class="text-sm text-primary font-extrabold">12,500 сўм</span>
+            <span class="text-[10px] text-outline line-through">18,000</span>
+          </div>
+          <button onclick="addToCart(this)" class="mt-2 w-full h-8 bg-secondary text-white rounded-xl text-xs font-bold flex items-center justify-center gap-1 active:scale-95 transition-all">
+            <span class="material-symbols-outlined text-[16px]">add</span>
+            <span>Себетке</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ТӨМЕНГИ БАҒДАРЛАЎ ПАНЕЛИ -->
+  <nav class="fixed bottom-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-t border-outline-variant/30 pb-2">
+    <div class="h-16 max-w-md mx-auto px-2 flex items-center justify-around">
+      <a href="index.html" class="flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-primary transition-colors text-xs">
+        <span class="material-symbols-outlined text-[24px]">home</span>
+        <span>Басқы бет</span>
+      </a>
+      <a href="catalog.html" class="flex flex-col items-center justify-center gap-0.5 text-primary font-bold text-xs">
+        <span class="material-symbols-outlined text-[24px]">grid_view</span>
+        <span>Каталог</span>
+      </a>
+      <a href="cart.html" class="flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-primary transition-colors text-xs relative">
+        <div class="relative flex items-center justify-center">
+          <span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+          <span class="absolute -top-1 -right-2 bg-secondary text-white text-[10px] min-w-[16px] h-4 px-1 rounded-full flex items-center justify-center font-bold" id="cart-badge">3</span>
+        </div>
+        <span>Себет</span>
+      </a>
+      <a href="checkout.html" class="flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-primary transition-colors text-xs">
+        <span class="material-symbols-outlined text-[24px]">credit_card</span>
+        <span>Төлем</span>
+      </a>
+      <a href="orders.html" class="flex flex-col items-center justify-center gap-0.5 text-on-surface-variant hover:text-primary transition-colors text-xs">
+        <span class="material-symbols-outlined text-[24px]">local_shipping</span>
+        <span>Буйыртпалар</span>
+      </a>
+    </div>
+  </nav>
+
+  <script>
+    function addToCart(btn) {
+      btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check</span><span>Қосылды!</span>';
+      btn.classList.replace('bg-secondary', 'bg-primary-container');
+      const badge = document.getElementById('cart-badge');
+      badge.textContent = parseInt(badge.textContent || 0) + 1;
+      setTimeout(() => {
+        btn.innerHTML = '<span class="material-symbols-outlined text-[16px]">add</span><span>Себетке</span>';
+        btn.classList.replace('bg-primary-container', 'bg-secondary');
+      }, 1000);
+    }
+  </script>
+</body>
+</html>
